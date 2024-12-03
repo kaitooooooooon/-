@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harunaへのサプライズ動画</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        video#backgroundVideo {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            filter: brightness(50%);
+        }
+        #playButton {
+            padding: 20px 40px;
+            font-size: 1.5em;
+            background-color: #ff8c00;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            z-index: 1;
+        }
+        #playButton:hover {
+            background-color: #ff7300;
+        }
+    </style>
+</head>
+<body>
+    <video id="backgroundVideo" autoplay muted loop>
+        <source src="YOUR_BACKGROUND_VIDEO_LINK_HERE" type="video/mp4">
+        お使いのブラウザは動画タグをサポートしていません。
+    </video>
+    <button id="playButton">動画を見る</button>
+
+    <script>
+        document.getElementById('playButton').addEventListener('click', function() {
+            window.location.href = 'YOUR_VIDEO_LINK_HERE';
+        });
+    </script>
+</body>
+</html>
